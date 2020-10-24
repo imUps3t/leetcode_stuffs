@@ -1,0 +1,33 @@
+Instructions for challenge:
+
+    Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+    You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+    You can return the answer in any order.
+
+Explanation:
+
+    All we're creating a (two-dimensional for-loop?)
+    Why do we create this loop?
+
+    The reason why this loop is created is because we must iterate over every possible addend combination.
+
+    ( Example
+
+        nums = [3, 4, 6, 12, 4, 7], target = 15;
+
+        The first iterator comes in, starting at 3.
+
+        We do 3 + 4, 3 + 6, 3 + 12, 3 + 4, 3 + 7,
+
+        Then we do 4 + 6, 4 + 12, 4 + 4, 4 + 7
+
+        We don't actually end up doing the 2nd iteration, however, since 3 + 12 = 15, which, in the method, will return [0, 3]
+
+        This is simply an example of what happens in our 2D iteration.
+
+        )
+
+    After the function finds the two digits that add up to the sum given in the argument "target", it either returns the two indexes if it was a success,
+    or it returns null.

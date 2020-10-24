@@ -1,0 +1,10 @@
+Template for leetcode writeups:
+
+- Text file must be named "writeup.txt"
+- Each part of the format must have a title
+
+Format:
+
+    Instructions for challenge (For example, "Given an array of integers.." and stop at examples (might change)
+
+    Explanation of how the code works (well-detailed)[
