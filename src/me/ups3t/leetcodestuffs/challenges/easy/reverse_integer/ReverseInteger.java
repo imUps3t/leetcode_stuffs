@@ -27,7 +27,6 @@ public class ReverseInteger {
     public static void main(String[] args) {
         ReverseInteger clazz = new ReverseInteger();
 
-        System.out.println(Integer.toString(9646324351));
         System.out.println(clazz.reverse(1348919));
     }
 
