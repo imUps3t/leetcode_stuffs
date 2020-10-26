@@ -1,0 +1,4 @@
+Explanation:
+    Both methods in the SortingIntegers.java class are using bubble sort, where the lowest numbers "bubble up" to the left as they are swapped during iteration.
+    I'm not sure which one is faster, I'd argue that sortingIntegers1 is the fastest one since it will stop iteration as soon as the integers in the
+    array are properly sorted.
