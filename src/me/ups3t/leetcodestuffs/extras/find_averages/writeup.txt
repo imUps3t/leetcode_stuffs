@@ -1,0 +1,21 @@
+>.< I actually stole the mode solution from the internet because my brain is slowly shrinking by the minute..
+
+Explanation:
+    Median:
+        In a array of numbers with an odd size, the median is the lower half of the array size divided by two, which always happens to ints. I subtract by 1 becaus arrays start with
+        0, and you'd end up with a median an index over without it.
+
+        In an array of numbers with a even size, you must add the two numbers in the middle (in an array of 8, it would be 4 and 5, since the other numbers on each side would be the same amount)
+        and divide by 2.
+    Mode:
+        All we do is perform a 2D for-loop over the array provided, and count the size for each.
+        At the end of the iteration, if the count for the current integer in the index is larger the current largest, it is now set as the largest,
+        and iteration continues towards the end.
+    Mean:
+        Mean was incredibly simple.
+        We do a for loop to get the sum of every single int added together, then divide by its size.
+    Range:
+        First we use our sorting algorithm to sort it from least to greatest, making it easier for us to find the largest value and the lowest.
+        We then subtract the largest value by the lowest (the top from the bottom, since it is sorted.)
+
+    bran smol x3

@@ -6,19 +6,34 @@ import java.util.List;
 
 public class SortingIntegers {
 
-    public int[] sortIntegers1(int[] array) {
+    public enum SortType {
+        LEAST,
+        GREATEST
+    }
+
+    public int[] sortIntegers1(SortType sortType, int[] array) {
         int[] arrCopy = array;
 
         boolean sorted = false;
         while(!sorted) {
             sorted = true;
-            for(int i = 0; i < array.length-1; i++) {
-                if (array[i + 1] < array[i]) {
-                    int temp = array[i];
+            for(int i = 0; i < arrCopy.length-1; i++) {
+                if(sortType == SortType.LEAST) {
+                    if (arrCopy[i + 1] < arrCopy[i]) {
+                        int temp = arrCopy[i];
 
-                    array[i] = array[i+1];
-                    array[i+1] = temp;
-                    sorted = false;
+                        arrCopy[i] = arrCopy[i + 1];
+                        arrCopy[i + 1] = temp;
+                        sorted = false;
+                    }
+                } else {
+                    if (arrCopy[i + 1] > arrCopy[i]) {
+                        int temp = arrCopy[i];
+
+                        arrCopy[i] = arrCopy[i + 1];
+                        arrCopy[i + 1] = temp;
+                        sorted = false;
+                    }
                 }
             }
         }
@@ -27,16 +42,25 @@ public class SortingIntegers {
 
     }
 
-    public int[] sortIntegers2(int[] array) {
+    public int[] sortIntegers2(SortType sortType, int[] array) {
         int[] arrCopy = array;
 
         for(int i = 0; i < arrCopy.length; i++) {
             for(int j = 0; j < arrCopy.length; j++) {
-                if(arrCopy[i] < array[j]) {
-                    int temp = array[i];
+                if(sortType == SortType.LEAST) {
+                    if (arrCopy[i] < arrCopy[j]) {
+                        int temp = arrCopy[i];
 
-                    array[i] = array[j];
-                    array[j] = temp;
+                        arrCopy[i] = arrCopy[j];
+                        arrCopy[j] = temp;
+                    }
+                } else {
+                    if (arrCopy[i] > arrCopy[j]) {
+                        int temp = arrCopy[i];
+
+                        arrCopy[i] = arrCopy[j];
+                        arrCopy[j] = temp;
+                    }
                 }
             }
         }
@@ -52,13 +76,13 @@ public class SortingIntegers {
 
         long currentTime = System.currentTimeMillis();
 
-        int[] firstSort = test.sortIntegers1(array);
+        int[] firstSort = test.sortIntegers1(SortType.LEAST, array);
         System.out.println(Arrays.toString(firstSort));
-        double passed1 = ((double) System.currentTimeMillis() - (double) currentTime) / 1000F;
+        double passed1 = (double) ((System.currentTimeMillis() - currentTime) / 1000F);
         currentTime = System.currentTimeMillis();
-        int[] secondSort = test.sortIntegers2(array);
+        int[] secondSort = test.sortIntegers2(SortType.GREATEST, array);
         System.out.println(Arrays.toString(secondSort));
-        double passed2 = (System.currentTimeMillis() - currentTime) / 1000F;
+        double passed2 = (double) ((System.currentTimeMillis() - currentTime) / 1000F);
 
         System.out.println("Time passed for 1st method: " + passed1 + "\nTime passed for 2nd method: " + passed2 + "\n");
         System.out.println(String.format("Are both equal? = %s", Arrays.hashCode(firstSort) == Arrays.hashCode(secondSort)));
