@@ -1,0 +1,4 @@
+Instructions
+    Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Explanation:
+    The lastNonZero value is only incremented if we reach a int that is not 0, so when we swap the current index and the nonZero index, it will only swap itself until a zero is hit.
