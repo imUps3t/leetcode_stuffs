@@ -5,7 +5,7 @@ Instructions:
 Explanation:
     I had a realization: sorting.
     In a sorted array, equal numbers will be stored next to each other.
-    After reaching every number, we check if the number beside it is equal to the current one, there is a duplicate, and we return true.
+    After reaching every number, we check if the number beside it is equal to the current one, and if so, there is a duplicate, and we return true.
     If after iterating it reaches the bottom of the function, that means there are no duplicates, and we can safely return false.
 Notes:
     In the leetcode testcase this took 3ms, faster than 99.70% of all submissions (yay! ^.^)
