@@ -1,0 +1,11 @@
+Instructions:
+    Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+
+    For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+
+Explanation:
+    We do 2 iterations total.
+    For the first iteration, we loop through the array and try to find the kid or index with the highest integer, or
+    amount of candies. After finding the amount, we do another loop.
+    With each loop, we add to the array list true or false based on if candies[i] + extraCandies >= maxCandy.
+    If this is true, the amount the extra would have provided would be (more than) enough to be the greatest.
