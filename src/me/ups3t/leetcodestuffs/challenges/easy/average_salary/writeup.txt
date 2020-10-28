@@ -1,0 +1,16 @@
+Instructions:
+    Given an array of unique integers salary where salary[i] is the salary of the employee i.
+
+    Return the average salary of employees excluding the minimum and maximum salary.
+Notes:
+    I saw a solution after submitting that discussed using Arrays.sort, but that would probably take too much space. My
+    code took up 500b less than his anyway, so we're good!
+Explanation:
+    First, we get the min and max of our current array. The reason we need to obtain these is so later we can make a
+    if check that the current index is NOT equal to the current max.
+
+    Then, we add everything that isn't the minimum and maximum numbers, and divide by the length - 2.
+
+    The cause for us subtracting to is because the min and max are two numbers that we are not including.
+
+    Adding up all numbers of an array and dividing by the length is called the mean.
