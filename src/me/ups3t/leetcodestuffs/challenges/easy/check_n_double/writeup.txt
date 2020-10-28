@@ -1,0 +1,13 @@
+Instructions:
+    Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
+
+    More formally check if there exists two indices i and j such that :
+
+        i != j
+        0 <= i, j < arr.length
+        arr[i] == 2 * arr[j]
+Explanation:
+    We do a 2D iteration of the arr array.
+    In the first loop, we do another loop to see if the current number the index points to is equal to the current nested iteration doubled.
+    The reason we make a check to make sure i != j is because numbers that, multiplied by 2, still equal itself (like
+    0.)
