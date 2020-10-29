@@ -1,0 +1,15 @@
+Instructions:
+    Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+
+Explanation:
+    You might be wondering "why the hell are they asking to convert a string to lowercase? almost every high level language has it"
+    I actually have no idea why, but it's probably because they wanted you to figure out a way yourself.
+
+    I came up with a simple solution that isn't str.toLowerCase();
+
+    First, we check if the number is alphabetic and is not uppercase first.
+
+    Then, we perform a for loop on each member of the string.
+
+    Every uppercase letter's lowercase ASCII code is 32 more than the uppercase one.
+    So we simply add 32 to each char code and append it to the new string, and return after iteration is complete.
