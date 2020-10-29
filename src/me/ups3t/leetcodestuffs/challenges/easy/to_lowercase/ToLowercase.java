@@ -15,15 +15,11 @@ public class ToLowercase {
         return copy;
     }
 
-
-    // uppercase A = 65
-    // lowercase a = 97;
-
     public static void main(String[] args) {
 
         ToLowercase test = new ToLowercase();
 
-        System.out.println(test.toLowerCase("LOL UR DUMB!1!1!!"));
+        System.out.println(test.toLowerCase("THANKS FOR READING MY CODE <3"));
     }
 
 }
