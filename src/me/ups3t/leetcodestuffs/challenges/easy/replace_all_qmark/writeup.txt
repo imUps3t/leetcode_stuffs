@@ -1,0 +1,16 @@
+Instructions:
+    Given a string s containing only lower case English letters and the '?' character, convert all the '?' characters into lower case letters such that the final string does not contain any consecutive repeating characters. You cannot modify the non '?' characters.
+
+    It is guaranteed that there are no consecutive repeating characters in the given string except for '?'.
+
+    Return the final string after all the conversions (possibly zero) have been made. If there is more than one solution, return any of them. It can be shown that an answer is always possible with the given constraints.
+Explanation:
+    First I want to explain one thing: we make the previous and next variables so we can set that previous = 0 in the
+    beginning, and next = the current index in the end.
+
+    We iterate an array to find a question mark. If we find a question mark, we start a for loop from 97 to 122
+    (the ASCII color codes for lowercase a-z) and make sure that the previous and next indexes are not the same as the
+    current letter we are testing is available. If not, we set the question mark to the current letter we are testing,
+    and move on.
+
+
