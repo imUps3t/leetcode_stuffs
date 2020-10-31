@@ -1,0 +1,4 @@
+Explanation:
+    We set the closest value to zero to arr[0], and if later values are lower than that the closest value will be said later value.
+    We keep setting the closest value to anything lower than the current to ensure by the end after searching it will be
+    correct.
