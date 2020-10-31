@@ -8,4 +8,4 @@ Instructions:
 
     Return the minimum number of operations needed to display the number Y.
 Explanation:
-    still trying to figure this out >~<
+    no writeup for this one, but there are comments on the code! :)
