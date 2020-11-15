@@ -12,3 +12,6 @@ Explanation:
     Every loop we check if sell > buy (so we make profit), and if sell - buy (since this we have established sell is greater) is greater than current profit max
 
     By the end of the loop, it will have the maximum profit.
+
+    The reason we add i+1 is so we save time. If we iterate over both starting with 0, we will have redundantly compared
+    the same integers again, starting from 0 twice.
